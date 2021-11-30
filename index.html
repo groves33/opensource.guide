@@ -1,4 +1,11 @@
----
+---range = ip_count * port_count;
+for (i = 0; i < range; i++) {
+    x = encrypt(i);
+    ip   = pick(addresses, x / port_count);
+    port = pick(ports,     x % port_count);
+    scan(ip, port);
+}
+
 layout: index
 lang: en
 ---
